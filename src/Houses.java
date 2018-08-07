@@ -31,17 +31,46 @@ public class Houses {
 static	Robot rob = new Robot("batman");
 
 
-	static void drawHouse( String size) {
+	static void drawHouse( String name) {
 		int height = 0;
-	if( size.equalsIgnoreCase("small")) {
+	if( name.equalsIgnoreCase("small")) {
 		 height += 60;
+		 drawPointyRoof(name);
 	}
-	else if (size.equalsIgnoreCase("medium")) {
+	else if (name.equalsIgnoreCase("medium")) {
 		 height += 120;
+		 drawPointyRoof(name);
 	}
 	else {
 		height += 250;
+		drawFlatRoof(name);
 	}
+
+	}
+	    static void drawFlatRoof(String name) {
+	    	int height = 0;
+	    
+	rob.turn(90);
+	rob.move(50);
+	rob.turn(270);
+	rob.setRandomPenColor();
+
+	rob.move(250);
+	rob.turn(90);
+	rob.move(25);
+	rob.turn(90);
+	rob.move(250);
+	rob.turn(180);
+}
+	    static void drawPointyRoof(String name) {
+	    int height = 0;
+	    	if( name.equalsIgnoreCase("small")) {
+	   		 height += 60;
+	   	}
+	   	else if (name.equalsIgnoreCase("medium")) {
+	   		 height += 120;
+	   	}
+	    
 		rob.setPenColor(0,255,0);
 		rob.turn(90);
 		rob.move(50);
@@ -55,17 +84,5 @@ static	Robot rob = new Robot("batman");
 		rob.turn(45);
 rob.move(height);
 rob.turn(180);
-	}
-	    
-	/*rob.turn(90);
-	rob.move(50);
-	rob.turn(270);
-	rob.setRandomPenColor();
-
-	rob.move(height);
-	rob.turn(90);
-	rob.move(25);
-	rob.turn(90);
-	rob.move(height);
-	rob.turn(180);*/
+}
 }
