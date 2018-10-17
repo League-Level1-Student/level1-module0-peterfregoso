@@ -49,14 +49,17 @@ import javax.swing.JApplet;
 		System.out.println("buttonpressed"+ buttonPressed);
 
 	System.out.println("click");
-
+	if(buttonPressed == thanosShark) {
+		System.out.println("hit");
+		babyThanos();
+		}
 	if(buttonPressed == orangeShirtKid) {
 	System.out.println("hit");
-	playSound("orangeShirtKid.wav");
+	orangeShirtKid();
 	}
 	else if (buttonPressed == swipeIt) {
 		System.out.println("head");
-		playSound("31024__popo5525__swipeItp2.wav");
+		swipeIt() ;
 	}
 		}
 		
@@ -72,16 +75,16 @@ import javax.swing.JApplet;
 	    AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName)); 
 	    sound.play();
 	}
-	void showDucks() {
-	     playVideo("https://www.youtube.com/watch?v=MtN1YnoL46Q");
+	void babyThanos() {
+	     playVideo("https://www.youtube.com/watch?v=Qk3TcRWumXA");
 	}
 
-	void showFrog() {
-	     playVideo("https://www.youtube.com/watch?v=cBkWhkAZ9ds");
+	void swipeIt() {
+	     playVideo("https://www.youtube.com/watch?v=sfk71WKfg7o");
 	}
 
-	void showFluffyUnicorns() {
-	     playVideo("https://www.youtube.com/watch?v=a-xWhG4UU_Y");
+	void orangeShirtKid() {
+	     playVideo("https://www.youtube.com/watch?v=ErKy9Awzdkg");
 	}
 
 	void playVideo(String videoID) {
